@@ -26,3 +26,11 @@ Embedded Tomcat
 **Step 3**: Open browser and verify Swagger
 
       http://localhost:8080/swagger-ui.html
+      
+Run Mongo On Mac
+----------------
+https://treehouse.github.io/installation-guides/mac/mongo-mac.html
+
+Mongo Download
+--------------
+https://www.mongodb.com/download-center/community
