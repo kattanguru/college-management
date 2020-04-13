@@ -65,11 +65,11 @@
             <artifactId>orika-core</artifactId>
             <version>${orika.version}</version>
         </dependency>
-        <dependency>
+       <!-- <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
             <version>${commons-collections.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>io.reactivex.rxjava2</groupId>
             <artifactId>rxjava</artifactId>
