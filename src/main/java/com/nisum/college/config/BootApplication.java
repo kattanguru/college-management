@@ -25,7 +25,7 @@ public class BootApplication extends SpringBootServletInitializer {
     private static Logger logger = LoggerFactory.getLogger(BootApplication.class);
 
     public static void main(String[] args) {
-        logger.debug("College Management Spring Boot Application Started");
+        logger.debug("College Management Spring Boot Application Starting.....");
         SpringApplication.run(BootApplication.class, args);
     }
 

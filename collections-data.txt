@@ -1,0 +1,27 @@
+> use nisum;
+
+> show dbs;
+
+> db.createCollection("student");
+
+> db.student.insert({ "_id" : 10001, "firstName" : "Nagaraju", "lastName" : "Kattanguru", "email" : "kattanguru@gmail.com", "branch" : "ECE", "phoneNumber" : "9000012345" });
+
+> db.createCollection("branch");
+
+> db.branch.insert({ "_id" : 20001, "name" : "ECE", "course" : "MCA" });
+
+> db.createCollection("course");
+
+> db.course.insert({ "_id" : 30001, "name" : "MCA" });
+
+> db.student.find().pretty();
+{
+	"_id" : 10001,
+	"firstName" : "Nagaraju",
+	"lastName" : "Kattanguru",
+	"email" : "kattanguru@gmail.com",
+	"branch" : "ECE",
+	"phoneNumber" : "9000012345"
+}
+
+> db.student.drop();
