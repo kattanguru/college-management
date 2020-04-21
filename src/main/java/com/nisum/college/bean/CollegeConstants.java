@@ -28,5 +28,6 @@ public final class CollegeConstants {
 
     public static final String DELETED_SUCCESSFULLY = "Deleted Successfully";
 
-    public static final String TOPIC_NAME = "College-Management";
+    public static final String STUDENTS_TOPIC = "Students";
+    public static final String STUDENT_TOPIC = "Student";
 }

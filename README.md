@@ -65,7 +65,8 @@ Banner Changes
 --------------
 https://devops.datenkollektiv.de/banner.txt/index.html
 
-#Kafka Integration
+Kafka Integration
+================
 
 [Download and install Apache Kafka](http://kafka.apache.org/downloads.html)
 

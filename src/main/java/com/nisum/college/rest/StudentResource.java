@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.nisum.college.bean.CollegeConstants.*;
@@ -97,7 +98,9 @@ public class StudentResource {
     public Response addStudent(@RequestBody StudentBO student) {
         logger.debug("START :: Add Student Details : {}", student);
         student = studentService.addStudent(student);
-        kafkaTemplate.send(TOPIC_NAME, STUDENT_NAME, student);
+        List<StudentBO> studentBOList = new ArrayList<>();
+        studentBOList.add(student);
+        kafkaTemplate.send(STUDENTS_TOPIC, studentBOList);
         logger.debug("Student details published to Kafka Topic");
         logger.debug("END :: Add Student Details : {}", student);
         return Response.status(HttpStatus.SC_CREATED).entity(student).build();
