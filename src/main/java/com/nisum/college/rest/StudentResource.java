@@ -8,6 +8,7 @@ import org.apache.commons.httpclient.HttpStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -27,6 +28,9 @@ public class StudentResource {
 
     @Autowired
     private StudentService studentService;
+
+    @Autowired
+    private KafkaTemplate<String, Object> kafkaTemplate;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -93,6 +97,8 @@ public class StudentResource {
     public Response addStudent(@RequestBody StudentBO student) {
         logger.debug("START :: Add Student Details : {}", student);
         student = studentService.addStudent(student);
+        kafkaTemplate.send(TOPIC_NAME, STUDENT_NAME, student);
+        logger.debug("Student details published to Kafka Topic");
         logger.debug("END :: Add Student Details : {}", student);
         return Response.status(HttpStatus.SC_CREATED).entity(student).build();
     }

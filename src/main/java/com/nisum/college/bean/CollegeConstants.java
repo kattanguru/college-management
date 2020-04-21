@@ -15,6 +15,7 @@ public final class CollegeConstants {
     public static final String NAME = "name";
     public static final String COURSE_NAME = "course";
     public static final String STUDENT_NAME = "student";
+    public static final String STUDENTS_NAME = "students";
 
     public static final String BASE_PACKAGE = "com.nisum.college";
     public static final String RESOURCES_PACKAGE = "com.nisum.college.rest";
@@ -25,4 +26,6 @@ public final class CollegeConstants {
     public static final String COLLEGE_MANAGEMENT = "College Management Details";
 
     public static final String DELETED_SUCCESSFULLY = "Deleted Successfully";
+
+    public static final String TOPIC_NAME = "College-Management";
 }
