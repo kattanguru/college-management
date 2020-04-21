@@ -19,12 +19,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
-import static com.nisum.college.bean.CollegeConstants.STUDENTS_NAME;
-import static com.nisum.college.bean.CollegeConstants.TOPIC_NAME;
+import static com.nisum.college.bean.CollegeConstants.*;
 
 
 @Component
-@Path("/kafka")
+@Path(KAFKA)
 @Api(value = "Kafka Details")
 public class KafkaResource {
     private static Logger logger = LoggerFactory.getLogger(KafkaResource.class);

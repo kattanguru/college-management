@@ -8,6 +8,7 @@ public final class CollegeConstants {
     public static final String COURSE = "/course";
     public static final String BRANCH = "/branch";
     public static final String ADD = "/add";
+    public static final String KAFKA = "/kafka";
 
     public static final String ID = "id";
     public static final String PHONE = "phoneNumber";
